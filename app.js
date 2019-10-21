@@ -7,6 +7,7 @@ const app = express();
 const port = 8333;
 const index = require('./routes/index');
 const hello = require('./routes/hello');
+const me = require('./routes/me');
 const sqlite3 = require('sqlite3').verbose();
 const db = new sqlite3.Database('./db/texts.sqlite');
 const bcrypt = require('bcryptjs');
@@ -25,6 +26,16 @@ app.use((req, res, next) => {
     console.log(req.path);
     next();
 });
+
+app.use(cors());
+
+app.all('/', function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "https://ingolager.me");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
+
 
 router.post("/reports",
     (req, res, next) => checkToken(req, res, next),
@@ -54,6 +65,8 @@ if (process.env.NODE_ENV !== 'test') {
 
 app.use('/', index);
 app.use('/hello', hello);
+app.use('/me', me);
+
 
 // Testing routes with method
 app.get("/user", (req, res) => {
