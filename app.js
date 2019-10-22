@@ -29,13 +29,6 @@ app.use((req, res, next) => {
 
 app.use(cors());
 
-app.all('/', function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "https://ingolager.me");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
-});
-
-
 
 router.post("/reports",
     (req, res, next) => checkToken(req, res, next),
