@@ -1,0 +1,11 @@
+{
+  "meHead": "Fyra nyanser av ramverk",
+  "meText": "Jag heter Ingvar Lagerlöf och går andra året på BTH:s distansprogram Webbprogrammering. Jag arbetar också som webbredaktör på Botkyrka kommun och vet inte vad jag vill bli när jag blir stor. ",
+  "description": "Här är en bit text.",
+  "reportHead": "Redovisning vecka 1",
+  "reportText": "Modulerna i denna app är skapade med kommandot npx create-react-app my-app. Starta appen med kommandot npm start.",
+  "registerText": "Här kan du lämna in dina redovisningstexter. Fyll i namn, epost och lösenord. Du behöver också ange ditt födelsedatum.",
+  "reportHead2": "Redovisning vecka 2",
+  "reportText2a": "Det blev ett ganska enkelt formulär med select-menyer som datumväljare. Jag försökte mig på att göra en popup med date-picker men förstod faktiskt inte hur jag skulle göra, jag kunde för lite när jag började. Nu när jag är klar och lärt mig mer kan jag nog göra en riktig date-picker, men det känns lite drygt att börja om från början.",
+  "reportText2b": "Jag satsade på att göra formuläret tydligt, och göra så att man kan tabba sig genom det i rätt ordning. Det finns en bugg i formuläret som jag inte lyckats lösa: default-värdena i födelsedags-menyerna ger värdet undefined om man skickar formuläret utan att pilla i menyerna. Jag använder mig av arrayer för värdena, och skickar respektive arrays value-del. Defaultvärdena ligger i defaultValue och jag lyckades som sagt inte lösa detta krux."
+}
