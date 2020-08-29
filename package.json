@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test": "nyc --reporter=html --reporter=text --reporter=clover mocha --timeout 10000",
     "start": "nodemon app.js",
     "production": "SET NODE_ENV='production' && nodemon app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+     "clean": "rm -rf node_modules package-lock.json"
   },
   "author": "",
   "license": "ISC",
@@ -22,6 +23,10 @@
     "sqlite3": "^4.1.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0"
+    "babel-cli": "^6.26.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^8.1.2",
+    "nyc": "^15.1.0"
   }
 }
